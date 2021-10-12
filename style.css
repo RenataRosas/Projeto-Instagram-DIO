@@ -1,0 +1,45 @@
+#instagram-wrapper, .instagram-login, .instagram-logout, .not-account, .link-blue, link, .get-the-app {padding: 0;margin: 0;box-sizing: border-box;font-family: sans-serif;font-size: 14px;}
+
+/*BODY: contém todos os DIVs*/
+.body {width: 100%;min-height: 100vh;background-color: rgb(243, 244, 244);margin: 0;padding: 0;display: flex;justify-content: center;}
+
+/*DIV instagram-wrapper engloba (Div instagram-phone e instagram-continue) (todos) exceto o DIV List0*/
+.instagram-wrapper {display: flex; align-items: center; justify-content: start; width: 40%; height: 83.5vh;}
+
+/*DIV instagram-phone - Imagem do celular- Phone*/
+.instagram-phone {display: flex;align-items: center;justify-content: center;width: 90%;}
+
+/*DIV .instagram-continue - Contém Group (Group0, Group1) e GetApp */
+.instagram-continue { /*Um width de 90% foi suficiente para que os conteiners não atravessassem um ao outro durante o encolhimento da pagina*/
+display: flex;align-items: center;justify-content: space-around;flex-direction: column;width: 90%; min-height: 30rem;}
+
+/*DIV GROUP. é onde esta as informações de login, remover conta, Não é doraexterminadora? Alternar contas ou Inscreva-se.*/
+.group {display: flex;justify-content: space-between;align-items: center;flex-direction: column;background-color: white;width: 90%;padding: 1.0rem 0;border: 1px solid lightgray;border-radius: 3px;}
+.group:nth-child(1) {min-height: 18rem;}
+.instagram-logo {height: 3rem;}
+.profile-photo {display: flex;justify-content: center;align-items: center;border-radius: 50%; overflow: hidden;}
+.profile-photo img {height: 6rem;}
+.instagram-login {background-color: rgb(80, 125, 248);color: white;padding: 8px;border-radius: 4px;}
+
+/*DIV GET.APP*/
+.get-the-app {display: flex;flex-direction: column;align-items: center;justify-content: center;width: 100%;padding: 1.3rem 0;}
+.download {display: flex;width: 100%; justify-content: space-evenly;align-items: center;padding: 1rem;}
+.app-download {height: 3rem;width: 10rem;background-size: cover;}
+.app-download:nth-child(1) {background-image: url('apple-button.png');}
+.app-download:nth-child(2) {background-image: url('googleplay-button.png');}
+
+/*DIV DO RODAPE: List0*/
+.list0{font-size: 12px; font-family:sans-serif; text-align: center; position: absolute; bottom: 0; margin-right: 50px; margin-left: 50px; margin-bottom: 70px; line-height: 30px;}
+
+/* QUERIES */
+
+@media (max-width: 1024px) 
+{.instagram-wrapper {width: 90%;}}
+ 
+@media (max-width: 650px) {
+.body {background-color: white;}
+.instagram-wrapper {width: 90%;}
+.instagram-phone {display: none;}
+.instagram-continue {width:100%;}
+.group { border: 1px solid transparent;}
+ }
